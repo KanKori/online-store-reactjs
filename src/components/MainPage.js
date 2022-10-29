@@ -1,17 +1,31 @@
 import * as React from "react";
 import ProductsPage from "./ProductsPage";
+import Cart from "./Cart"
 
 class MainPage extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {openCart: false}
+    }
+
+    openCart = () =>{
+        this.setState({openCart: true})
+    }
+
+    closeCart = () => {
+        this.setState({openCart: false})
+    }
+
     render() {
         return <div className="row">
+        {this.state.openCart ? <Cart closeModal={this.closeCart}/> : "" /*empty string*/}
             <div className="large-12 columns">
                 <div class="logo-holder logo-8">
                         <a href="">
                           <h3>Orpheus <span>Orpheus</span></h3>
                         </a>
                       </div>
-
                 <div className="row">
                     <div className="large-12 columns">
 
@@ -35,7 +49,7 @@ class MainPage extends React.Component {
                                     </li>
                                     <li className="divider"></li>
                                     <li className="has-dropdown">
-                                        <a data-toggle="modal" data-target="#cart" href="#"> Cart </a>
+                                         <a data-toggle="modal" data-target="#cart" href="#" onClick={() => this.openCart()}>Cart </a>
                                     </li>
                                 </ul>
                             </section>

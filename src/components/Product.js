@@ -17,6 +17,7 @@ class Product extends React.Component {
         productList.push(product);
     }
     localStorage.setItem("products", JSON.stringify(productList));
+    alert("You successfully added product to the cart!");
     }
 
     render() {
