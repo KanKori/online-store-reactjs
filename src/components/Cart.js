@@ -47,16 +47,21 @@ class Cart extends React.Component {
         		</Modal.Header>
         		<Modal.Body>
         		    <table>
+        		        <tbody>
+
                        <tr>
                            <th>Title</th>
                            <th>Price</th>
                        </tr>
                        {this.state.productsList.map(product => (
+                       <React.Fragment key={product.id}>
                           <tr>
                              <td>{product.title}</td>
                              <td>{product.price}</td>
                           </tr>
+                       </React.Fragment>
                        ))}
+                       </tbody>
                     </table>
         	    </Modal.Body>
         		<Modal.Footer>

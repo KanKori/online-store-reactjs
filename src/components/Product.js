@@ -22,7 +22,7 @@ class Product extends React.Component {
 
     render() {
         return <div className="large-3 small-6 columns">
-            <img src=""/>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.takamine.com%2Fg-series&psig=AOvVaw3tcvbBj19-Gm-pFrl7cbqw&ust=1667264070840000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIi0qOegifsCFQAAAAAdAAAAABAE"/>
             <div className="panel">
                 <h5>{this.props.product.title}</h5>
                 <h6 className="subheader">{this.props.product.price}</h6>
@@ -30,7 +30,6 @@ class Product extends React.Component {
             </div>
         </div>
     }
-
 }
 
 export default Product;

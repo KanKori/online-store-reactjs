@@ -21,13 +21,12 @@ class FinishPurchase extends React.Component {
         let products = localStorage.getItem("products");
         axios.post("http://localhost:8080/finishPurchase", {
             productIds: JSON.parse(products),
-            userName: this.state.userSurname,
+            userName: this.state.userName,
             userSurname: this.state.userSurname,
             email: this.state.email,
             phone: this.state.phone,
             address: this.state.address,
             comment: this.state.comment,
-            password: this.state.password
         }).then(res => {
             alert("Thanks for your purchase. Our manager will contact you soon.")
             localStorage.clear();
