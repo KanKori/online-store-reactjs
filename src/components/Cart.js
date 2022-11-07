@@ -77,7 +77,6 @@ class Cart extends React.Component {
        			</Modal.Footer>
        		</Modal>
      		);
-
        	}
     }
 }
